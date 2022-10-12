@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!-- Marker file indicating JSF 2.3 should be enabled in the application -->
+<faces-config version="2.3"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd">
+
+    <navigation-rule>
+        <from-view-id>pages/hauptseite.xhtml</from-view-id>
+
+        <navigation-case>
+            <from-outcome>red</from-outcome>
+            <to-view-id>pages/rot.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>blue</from-outcome>
+            <to-view-id>pages/blue.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>green</from-outcome>
+            <to-view-id>pages/verde.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>pages/*</from-view-id>
+        <navigation-case>
+            <from-outcome>hauptseite</from-outcome>
+            <to-view-id>pages/hauptseite.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+
+</faces-config>
